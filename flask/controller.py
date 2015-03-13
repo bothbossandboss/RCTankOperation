@@ -16,11 +16,6 @@ class Controller(object):
 		os.system('gpio export '+ str(PIN_L2) + ' out')
 		os.system('gpio export '+ str(PIN_R1) + ' out')
 		os.system('gpio export '+ str(PIN_R2) + ' out')
-#		self.io = wiringpi.GPIO(wiringpi.GPIO.WPI_MODE_SYS)
-#		self.io.pinMode(PIN_L1, self.io.OUTPUT)
-#		self.io.pinMode(PIN_L2, self.io.OUTPUT)
-#		self.io.pinMode(PIN_R1, self.io.OUTPUT)
-#		self.io.pinMode(PIN_R2, self.io.OUTPUT)
 
 	def getId(self):
 		return self.id
@@ -29,18 +24,12 @@ class Controller(object):
 		if rate > 0:
 			os.system('gpio -g write ' + str(iIn1Pin) +' 1')
 			os.system('gpio -g write ' + str(iIn2Pin) +' 0')
-#			self.io.digitalWrite(iIn1Pin, self.io.HIGH)
-#			self.io.digitalWrite(iIn2Pin, self.io.LOW)
 		elif rate == 0:
 			os.system('gpio -g write ' + str(iIn1Pin) +' 0')
 			os.system('gpio -g write ' + str(iIn2Pin) +' 0')
-#			self.io.digitalWrite(iIn1Pin, self.io.LOW)
-#			self.io.digitalWrite(iIn2Pin, self.io.LOW)
 		else:
 			os.system('gpio -g write ' + str(iIn1Pin) +' 0')
 			os.system('gpio -g write ' + str(iIn2Pin) +' 1')
-#			self.io.digitalWrite(iIn1Pin, self.io.LOW)
-#			self.io.digitalWrite(iIn2Pin, self.io.HIGH)
 
 	# -------------------------------------------------- #
 	# motion setting (5 patterns)                        #
