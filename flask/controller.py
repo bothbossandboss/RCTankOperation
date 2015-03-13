@@ -2,7 +2,7 @@ import os
 import wiringpi
 
 # -------------------------------------------------- #
-# define                                             #
+# define Raspberry Pi Pins                           #
 # -------------------------------------------------- #
 PIN_L1 = 4
 PIN_L2 = 17
@@ -10,6 +10,9 @@ PIN_R1 = 11
 PIN_R2 = 9
 
 class Controller(object):
+	# -------------------------------------------------- #
+	# init class                                         #
+	# -------------------------------------------------- #
 	def __init__(self, mid):
 		self.id = mid
 		os.system('gpio export '+ str(PIN_L1) + ' out')
@@ -20,6 +23,9 @@ class Controller(object):
 	def getId(self):
 		return self.id
 
+	# -------------------------------------------------- #
+	# control voltage of pin (HIGH/LOW)                  #
+	# -------------------------------------------------- #
 	def motorDrive(self, iIn1Pin, iIn2Pin, rate):
 		if rate > 0:
 			os.system('gpio -g write ' + str(iIn1Pin) +' 1')
