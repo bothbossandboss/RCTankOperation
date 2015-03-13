@@ -7,7 +7,8 @@ GitHubの右メニューのdownload zipでzipファイルをダウンロード�
 
 GitHubが使える人は、勿論git cloneしてもOK。
 
-=flaskディレクトリ=
+##flaskディレクトリ
+
 Raspberry Pi内にコピーすべきコードを含んだディレクトリ。
 
 設定詳細はWiki見てください。
