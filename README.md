@@ -13,6 +13,8 @@ wiki ... http://tomowatanabe.hatenablog.com/entry/2013/01/14/181116
 理由としては、wiringPiがC/C++言語用ライブラリなのではないかと疑ったため。
 多分wikiのwiringPiでもpythonプログラム内で使えるんだけど、一応別のバージョンも試してみたといった感じ。
 
+なので、この更新プログラムをそのまま実行する場合は、お手数ですが、WiringPi2-Pythonをダウンロードしてください...
+
 ##2015/4/4 戦車操作URLの変更
 http://[IP Address]/move/[direction]/[full or half]
 
