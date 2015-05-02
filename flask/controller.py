@@ -17,7 +17,8 @@ PIN_L2 = 19
 PIN_R1 = 27
 PIN_R2 = 17
 
-HALF_SPEED = 5
+FULL_SPEED = 100
+HALF_SPEED = 50
 
 COMMAND = 'sudo python /home/pi/flask/pwm_control.py '
 
@@ -80,23 +81,19 @@ class Controller(object):
 		if mode == 'stop':
 			self.motorDrive(PIN_L1, PIN_L2, 0)
 			self.motorDrive(PIN_R1, PIN_R2, 0)
-			return 'changed'
+			return 'changed to stop'
 		elif mode == 'forward':
 			os.system(str(COMMAND)+' '+str(PIN_L1)+' '+str(PIN_L2)+' '+str(speed)+' '+str(0)+' '+str(PIN_R1)+' '+str(PIN_R2)+' '+str(speed)+' '+str(0))
-			self.changeMode('forward')
-			return 'changed'
+			return 'changed to forward'
 		elif mode == 'backward':
 			os.system(str(COMMAND)+' '+str(PIN_L1)+' '+str(PIN_L2)+' '+str(0)+' '+str(speed)+' '+str(PIN_R1)+' '+str(PIN_R2)+' '+str(0)+' '+str(speed))
-			self.changeMode('backward')
-			return 'changed'
+			return 'changed to backward'
 		elif mode == 'right':
 			os.system(str(COMMAND)+' '+str(PIN_L1)+' '+str(PIN_L2)+' '+str(speed)+' '+str(0)+' '+str(PIN_R1)+' '+str(PIN_R2)+' '+str(0)+' '+str(speed))
-			self.changeMode('right')
-			return 'changed'
+			return 'changed to right'
 		elif mode == 'left':
 			os.system(str(COMMAND)+' '+str(PIN_L1)+' '+str(PIN_L2)+' '+str(0)+' '+str(speed)+' '+str(PIN_R1)+' '+str(PIN_R2)+' '+str(speed)+' '+str(0))
-			self.changeMode('left')
-			return 'changed'
+			return 'changed to left'
 		else:
 			return 'error'
 
