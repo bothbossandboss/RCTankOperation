@@ -8,10 +8,14 @@ import time
 # -------------------------------------------------- #
 # define Raspberry Pi Pins                           #
 # -------------------------------------------------- #
-PIN_L1 = 4
-PIN_L2 = 17
-PIN_R1 = 11
-PIN_R2 = 9
+#PIN_L1 = 4
+#PIN_L2 = 17
+#PIN_R1 = 11
+#PIN_R2 = 9
+PIN_L1 = 26
+PIN_L2 = 19
+PIN_R1 = 27
+PIN_R2 = 17
 
 FULL_SPEED = 10
 HALF_SPEED = 5
